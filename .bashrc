@@ -14,7 +14,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 shopt -s checkwinsize
 
 # ─── Prompt ──────────────────────────────────────────────────────────────────
-PS1='\[\033[01;32m\]kaggle-gpu\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1="\[\033[38;5;11m\]\u\[\033[0m\]@\[\033[38;5;14m\]\h \[\033[38;5;13m\]\w\[\033[0m\]\n\[\033[38;5;10m\]→ \[\033[0m\]"
 
 # ─── Colors ──────────────────────────────────────────────────────────────────
 if [ -x /usr/bin/dircolors ]; then
@@ -35,6 +35,8 @@ alias cls='clear'
 alias ports='ss -tulanp'
 alias gpu='nvidia-smi'
 alias py='python'
+
+
 
 # ─── Kaggle Environment ──────────────────────────────────────────────────────
 # Load full environment from the Kaggle kernel process (handles all special chars safely)
