@@ -86,15 +86,17 @@ def start_tunnel():
         print(output)
 
     return proc
-
-
+def bash():
+    run_shell("mv .bashrc ~/.bashrc")
+    print("Moved custom .bashrc file")
 def main():
-    print("\n=== Kaggle SSH Tunnel Setup ===\n")
+    print("\n=== Setting things up ===\n")
+    bash()
     install_cloudflared()
     setup_ssh()
     configure_ssh()
     proc = start_tunnel()
-
+    
     try:
         print("Tunnel is running. Press Ctrl+C to stop.")
         proc.wait()
