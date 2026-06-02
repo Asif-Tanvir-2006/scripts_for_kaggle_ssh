@@ -16,7 +16,8 @@ def run(cmd, capture=False):
         return result.stdout
 
     if result.returncode != 0:
-        raise RuntimeError(f"Command failed: {cmd}")
+        print(f"Command failed: {cmd}")
+        print("Proceeding to next")
 
     return ""
 
