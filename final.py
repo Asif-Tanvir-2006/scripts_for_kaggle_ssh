@@ -30,7 +30,7 @@ def session_exists(name):
     )
     return result.returncode == 0
 print("Copying .bashrc")
-run("cp .bashrc ~/.bashrc")
+run("cp bashrc ~/.bashrc")
 print("Done...")
 print("\n=== VS Code Web Setup ===\n")
 
